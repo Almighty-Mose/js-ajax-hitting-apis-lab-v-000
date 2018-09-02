@@ -28,14 +28,14 @@ function showRepositories() {
   document.getElementById('repositories').innerHTML = repoList;
 }
 
-// function getCommits(el) {
-//   const name = el.dataset.repository;
-//   const uri = rootURL + '/repos/' + el.dataset.username + '/' + repoName + '/commits';
-//   const req = new XMLHttpRequest();
-//   req.addEventListener("load", displayCommits);
-//   req.open("GET", uri);
-//   req.send();
-// }
+function getCommits(el) {
+  const name = el.dataset.repository;
+  const uri = rootURL + '/repos/' + el.dataset.username + '/' + name + '/commits';
+  const req = new XMLHttpRequest();
+  req.addEventListener("load", displayCommits);
+  req.open("GET", uri);
+  req.send();
+}
 
 function getCommits(el) {
   const repoName = el.dataset.repository;
