@@ -29,7 +29,11 @@ function showRepositories() {
 }
 
 function getCommits(el) {
-  const name = el.dataset.
+  const name = el.dataset.repository;
+  const uri = rootURL + '/commits'
+  const req = new XMLHttpRequest();
+  req.addEventListener("load", showCommits);
+  req.open("GET", )
 }
 
 // function getCommits(el) {
