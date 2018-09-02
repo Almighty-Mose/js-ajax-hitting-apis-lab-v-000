@@ -8,3 +8,7 @@ function getRepositories() {
   req.open("GET", uri);
   req.send();
 }
+
+function showRepositories() {
+  
+}
