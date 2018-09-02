@@ -4,12 +4,12 @@ function getRepositories() {
   let name = document.getElementById("username").value;
   let uri = rootURL + '/users/' + name + '/repos';
   let req = new XMLHttpRequest();
-  req.addEventListener("load", showRepositories);
+  req.addEventListener("load", displayRepositories);
   req.open("GET", uri);
   req.send();
 }
 
-function showRepositories() {
+function displayRepositories() {
   const repos = JSON.parse(this.responseText);
   const repoList =
     '<ul>' + repos.map(repo => {
