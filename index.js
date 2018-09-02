@@ -1,3 +1,4 @@
 function getRepositories() {
-  let repo
+  let name = document.getElementById("username").value;
+  
 }
