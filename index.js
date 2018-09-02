@@ -53,27 +53,27 @@ function displayCommits() {
 function getBranches(el) {
   const name = el.dataset.repository;
   const uri = rootURL + '/repos/' + el.dataset.username + '/' + name + '/branches';
-  const req = XMLHttpRequest();
+  const req = new XMLHttpRequest();
   req.addEventListener("load", displayBranches);
   req.open("GET", uri);
   req.send();
 }
 
-// function displayBranches() {
-//   const branches = JSON.parse(this.responseText);
-//   const branchesList =
-//     `<ul>${branches.map(branch =>
-//       '<li>' + branch.name + '</li>'
-//     )
-//     .join('')}</ul>`;
-  
-//   document.getElementById('details').innerHTML = branchesList;
-// }
-
 function displayBranches() {
   const branches = JSON.parse(this.responseText);
-  const branchesList = `<ul>${branches
-    .map(branch => '<li>' + branch.name + '</li>')
+  const branchesList =
+    `<ul>${branches.map(branch =>
+      '<li>' + branch.name + '</li>'
+    )
     .join('')}</ul>`;
+  
   document.getElementById('details').innerHTML = branchesList;
 }
+
+// function displayBranches() {
+//   const branches = JSON.parse(this.responseText);
+//   const branchesList = `<ul>${branches
+//     .map(branch => '<li>' + branch.name + '</li>')
+//     .join('')}</ul>`;
+//   document.getElementById('details').innerHTML = branchesList;
+// }
