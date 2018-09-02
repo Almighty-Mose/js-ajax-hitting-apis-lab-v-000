@@ -27,3 +27,7 @@ function showRepositories() {
     '</ul>';
   document.getElementById('repositories').innerHTML = repoList;
 }
+
+function getCommits() {
+  
+}
