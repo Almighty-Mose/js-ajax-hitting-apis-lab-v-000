@@ -49,3 +49,8 @@ function displayCommits() {
     
   document.getElementById('details').innerHTML = commitsList;
 }
+
+function getBranches(el) {
+  const name = el.dataset.repository;
+  const uri = rootURL + 
+}
